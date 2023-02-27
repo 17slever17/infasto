@@ -1,0 +1,51 @@
+.container {
+    & > * {
+        animation: appearance_lessons-materials 0.5s 150ms backwards;
+        backface-visibility: hidden;
+        @keyframes appearance_lessons-materials {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 350px;
+    padding: 10px;
+    background-color: #fff9e8;
+    box-shadow: 0 0 15px 1px rgb(255 223 140 / 70%);
+    border-radius: 10px;
+	transition: all 0.2s;
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 20px 5px rgb(255 223 140 / 70%);
+    }
+	a {
+		text-decoration: none;
+	}
+    img {
+        width: 100%;
+        border-radius: 7px;
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 20px;
+        color: #5f6363;
+		text-align: center;
+    }
+}

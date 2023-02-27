@@ -1,0 +1,49 @@
+@import './variables';
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+.title {
+    animation: title-animation 0.5s 250ms backwards;
+    backface-visibility: hidden;
+}
+@keyframes title-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-75px, 0);
+    }
+    70% {
+        transform: translate(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.aboutWrapper {
+    animation: about-animation 0.5s 250ms backwards;
+    backface-visibility: hidden;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+@keyframes about-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.aboutTitleEnd {
+    font-weight: 600 !important;
+    font-size: 28px !important;
+}
+.aboutText {
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
