@@ -17,7 +17,6 @@ function Lessons({ overlayRef }) {
     }
     return (
         <div className={`mainContainer ${styles.container}`} id='app'>
-            {/* исправить баг - не изменяется задание */}
             <section className={styles.lessons}>
                 <div className={styles.lessonsWrapper}>
                     <p className={`title ${styles.title}`}>Задание №{lessonId}</p>
@@ -36,14 +35,14 @@ function Lessons({ overlayRef }) {
                                         return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
                                     } else if (item.href) {
                                         return (
-                                            <a href={`/src/data/lessons_files/${item.href}`} download key={index}>
+                                            <a href={`/lessons_files/${item.href}`} download key={index}>
                                                 Задание №{lessonId}
                                             </a>
                                         )
                                     } else if (item.img) {
                                         return (
                                             <div key={index}>
-                                                <img src={`/src/data/lessons_files/${item.img}`} />
+                                                <img src={`/lessons_files/${item.img}`} />
                                             </div>
                                         )
                                     }
@@ -101,85 +100,85 @@ function Lessons({ overlayRef }) {
             </div>
             <aside className={`${styles.lessonsNav} ${isHamburgerActive && styles.lessonsNav_active}`}>
                 <p className={styles.lessonsTitle}>Выбор задания</p>
-                <Link to='/lessons/1' className={`${styles.lesson} ${lessonId === '1' && styles.lessonActive}`}>
+                <Link to='/lessons/1' className={`${styles.lesson} ${lessonId === '1' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 1
                 </Link>
-                <Link to='/lessons/2' className={`${styles.lesson} ${lessonId === '2' && styles.lessonActive}`}>
+                <Link to='/lessons/2' className={`${styles.lesson} ${lessonId === '2' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 2
                 </Link>
-                <Link to='/lessons/3' className={`${styles.lesson} ${lessonId === '3' && styles.lessonActive}`}>
+                <Link to='/lessons/3' className={`${styles.lesson} ${lessonId === '3' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 3
                 </Link>
-                <Link to='/lessons/4' className={`${styles.lesson} ${lessonId === '4' && styles.lessonActive}`}>
+                <Link to='/lessons/4' className={`${styles.lesson} ${lessonId === '4' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 4
                 </Link>
-                <Link to='/lessons/5' className={`${styles.lesson} ${lessonId === '5' && styles.lessonActive}`}>
+                <Link to='/lessons/5' className={`${styles.lesson} ${lessonId === '5' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 5
                 </Link>
-                <Link to='/lessons/6' className={`${styles.lesson} ${lessonId === '6' && styles.lessonActive}`}>
+                <Link to='/lessons/6' className={`${styles.lesson} ${lessonId === '6' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 6
                 </Link>
-                <Link to='/lessons/7' className={`${styles.lesson} ${lessonId === '7' && styles.lessonActive}`}>
+                <Link to='/lessons/7' className={`${styles.lesson} ${lessonId === '7' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 7
                 </Link>
-                <Link to='/lessons/8' className={`${styles.lesson} ${lessonId === '8' && styles.lessonActive}`}>
+                <Link to='/lessons/8' className={`${styles.lesson} ${lessonId === '8' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 8
                 </Link>
-                <Link to='/lessons/9' className={`${styles.lesson} ${lessonId === '9' && styles.lessonActive}`}>
+                <Link to='/lessons/9' className={`${styles.lesson} ${lessonId === '9' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 9
                 </Link>
-                <Link to='/lessons/10' className={`${styles.lesson} ${lessonId === '10' && styles.lessonActive}`}>
+                <Link to='/lessons/10' className={`${styles.lesson} ${lessonId === '10' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 10
                 </Link>
-                <Link to='/lessons/11' className={`${styles.lesson} ${lessonId === '11' && styles.lessonActive}`}>
+                <Link to='/lessons/11' className={`${styles.lesson} ${lessonId === '11' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 11
                 </Link>
-                <Link to='/lessons/12' className={`${styles.lesson} ${lessonId === '12' && styles.lessonActive}`}>
+                <Link to='/lessons/12' className={`${styles.lesson} ${lessonId === '12' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 12
                 </Link>
-                <Link to='/lessons/13' className={`${styles.lesson} ${lessonId === '13' && styles.lessonActive}`}>
+                <Link to='/lessons/13' className={`${styles.lesson} ${lessonId === '13' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 13
                 </Link>
-                <Link to='/lessons/14' className={`${styles.lesson} ${lessonId === '14' && styles.lessonActive}`}>
+                <Link to='/lessons/14' className={`${styles.lesson} ${lessonId === '14' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 14
                 </Link>
-                <Link to='/lessons/15' className={`${styles.lesson} ${lessonId === '15' && styles.lessonActive}`}>
+                <Link to='/lessons/15' className={`${styles.lesson} ${lessonId === '15' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 15
                 </Link>
-                <Link to='/lessons/16' className={`${styles.lesson} ${lessonId === '16' && styles.lessonActive}`}>
+                <Link to='/lessons/16' className={`${styles.lesson} ${lessonId === '16' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 16
                 </Link>
-                <Link to='/lessons/17' className={`${styles.lesson} ${lessonId === '17' && styles.lessonActive}`}>
+                <Link to='/lessons/17' className={`${styles.lesson} ${lessonId === '17' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 17
                 </Link>
-                <Link to='/lessons/18' className={`${styles.lesson} ${lessonId === '18' && styles.lessonActive}`}>
+                <Link to='/lessons/18' className={`${styles.lesson} ${lessonId === '18' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 18
                 </Link>
-                <Link to='/lessons/19' className={`${styles.lesson} ${lessonId === '19' && styles.lessonActive}`}>
+                <Link to='/lessons/19' className={`${styles.lesson} ${lessonId === '19' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 19
                 </Link>
-                <Link to='/lessons/20' className={`${styles.lesson} ${lessonId === '20' && styles.lessonActive}`}>
+                <Link to='/lessons/20' className={`${styles.lesson} ${lessonId === '20' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 20
                 </Link>
-                <Link to='/lessons/21' className={`${styles.lesson} ${lessonId === '21' && styles.lessonActive}`}>
+                <Link to='/lessons/21' className={`${styles.lesson} ${lessonId === '21' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 21
                 </Link>
-                <Link to='/lessons/22' className={`${styles.lesson} ${lessonId === '22' && styles.lessonActive}`}>
+                <Link to='/lessons/22' className={`${styles.lesson} ${lessonId === '22' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 22
                 </Link>
-                <Link to='/lessons/23' className={`${styles.lesson} ${lessonId === '23' && styles.lessonActive}`}>
+                <Link to='/lessons/23' className={`${styles.lesson} ${lessonId === '23' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 23
                 </Link>
-                <Link to='/lessons/24' className={`${styles.lesson} ${lessonId === '24' && styles.lessonActive}`}>
+                <Link to='/lessons/24' className={`${styles.lesson} ${lessonId === '24' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 24
                 </Link>
-                <Link to='/lessons/25' className={`${styles.lesson} ${lessonId === '25' && styles.lessonActive}`}>
+                <Link to='/lessons/25' className={`${styles.lesson} ${lessonId === '25' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 25
                 </Link>
-                <Link to='/lessons/26' className={`${styles.lesson} ${lessonId === '26' && styles.lessonActive}`}>
+                <Link to='/lessons/26' className={`${styles.lesson} ${lessonId === '26' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 26
                 </Link>
-                <Link to='/lessons/27' className={`${styles.lesson} ${lessonId === '27' && styles.lessonActive}`}>
+                <Link to='/lessons/27' className={`${styles.lesson} ${lessonId === '27' && styles.lessonActive}`} onClick={() => setActiveBtn(1)}>
                     Задание 27
                 </Link>
             </aside>
