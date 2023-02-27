@@ -62,7 +62,7 @@ function Lessons({ overlayRef }) {
                             onClick={() => activeBtn !== 1 && setActiveBtn((prev) => prev - 1)}
                             className={`${styles.arrow} ${activeBtn === 1 && styles.endPoint}`}
                         >
-                            &#11164;
+                            {'<'}
                         </div>
                         <div
                             onClick={() => setActiveBtn(1)}
@@ -86,7 +86,7 @@ function Lessons({ overlayRef }) {
                             onClick={() => activeBtn !== 3 && setActiveBtn((prev) => prev + 1)}
                             className={`${styles.arrow} ${activeBtn === 3 && styles.endPoint}`}
                         >
-                            &#11166;
+                            {'>'}
                         </div>
                     </div>
                 </div>
