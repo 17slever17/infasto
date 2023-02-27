@@ -312,7 +312,7 @@
         }
         :global(.overlayVisible) {
             visibility: visible;
-			opacity: 1;
+            opacity: 1;
         }
     }
     .hamburger {
@@ -327,6 +327,9 @@
         background-color: white;
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
         transition: 0.5s all;
+        &:hover {
+            cursor: pointer;
+        }
         span {
             border-radius: 1px;
             height: 3px;
@@ -352,11 +355,6 @@
                 transform: translateY(-4.5px) rotate(-45deg);
             }
         }
-    }
-}
-@media screen and (any-pointer: fine) {
-    .hamburger_active {
-        right: 8.5px;
     }
 }
 @media screen and (max-width: 767px) {

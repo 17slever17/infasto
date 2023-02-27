@@ -7,6 +7,7 @@ import Lessons from './pages/Lessons'
 import Materials from './pages/Materials'
 import Variants from './pages/Variants'
 import Support from './pages/Support'
+import NotFound from './pages/NotFound'
 function App() {
     const numberPage = () => {
         switch (window.location.pathname.split('/')[1]) {
@@ -25,7 +26,11 @@ function App() {
         }
     }
     const [activeSidebarBtn, setActiveSidebarBtn] = React.useState(numberPage())
-    const overlayRef = React.useRef()
+    const [isOverlayActive, setIsOverlayActive] = React.useState(false)
+    const changePage = (id) => {
+        setActiveSidebarBtn(id)
+        setIsOverlayActive(false)
+    }
 
     return (
         <div className='container'>
@@ -34,12 +39,12 @@ function App() {
                 <p className='nav-title'>ИнфаСто</p>
             </nav>
             <main className='main'>
-                <div className='overlay' ref={overlayRef}></div>
+                <div className={`overlay ${isOverlayActive && 'overlayVisible'}`}></div>
                 <aside className='sidebar'>
                     <Link
                         to='/'
                         className={`btn ${activeSidebarBtn === 1 ? 'btn_active' : ''}`}
-                        onClick={() => setActiveSidebarBtn(1)}
+                        onClick={() => changePage(1)}
                         id='about'
                     >
                         <svg
@@ -60,7 +65,7 @@ function App() {
                     <Link
                         to='/lessons/1'
                         className={`btn ${activeSidebarBtn === 2 ? 'btn_active' : ''}`}
-                        onClick={() => setActiveSidebarBtn(2)}
+                        onClick={() => changePage(2)}
                         id='lessons'
                     >
                         <svg
@@ -88,7 +93,7 @@ function App() {
                     <Link
                         to='/materials'
                         className={`btn ${activeSidebarBtn === 3 ? 'btn_active' : ''}`}
-                        onClick={() => setActiveSidebarBtn(3)}
+                        onClick={() => changePage(3)}
                         id='materials'
                     >
                         <svg
@@ -109,7 +114,7 @@ function App() {
                     <Link
                         to='/variants'
                         className={`btn ${activeSidebarBtn === 4 ? 'btn_active' : ''}`}
-                        onClick={() => setActiveSidebarBtn(4)}
+                        onClick={() => changePage(4)}
                         id='variants'
                     >
                         <svg
@@ -139,7 +144,7 @@ function App() {
                     <Link
                         to='/support'
                         className={`btn ${activeSidebarBtn === 5 ? 'btn_active' : ''}`}
-                        onClick={() => setActiveSidebarBtn(5)}
+                        onClick={() => changePage(5)}
                         id='support'
                     >
                         <svg
@@ -192,10 +197,19 @@ function App() {
                 </aside>
                 <Routes>
                     <Route path='/' element={<Home></Home>}></Route>
-                    <Route path='/lessons/:lessonId' element={<Lessons overlayRef={overlayRef}></Lessons>}></Route>
+                    <Route
+                        path='/lessons/:lessonId'
+                        element={
+                            <Lessons
+                                isOverlayActive={isOverlayActive}
+                                setIsOverlayActive={setIsOverlayActive}
+                            ></Lessons>
+                        }
+                    ></Route>
                     <Route path='/materials' element={<Materials></Materials>}></Route>
                     <Route path='/variants' element={<Variants></Variants>}></Route>
                     <Route path='/support' element={<Support></Support>}></Route>
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </main>
             <footer className='footer'></footer>

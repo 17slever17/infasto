@@ -7,13 +7,13 @@ import VideoYT from '../components/Video'
 
 import styles from '../scss/Lessons.module.scss'
 
-function Lessons({ overlayRef }) {
+function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const [activeBtn, setActiveBtn] = React.useState(1)
     const [isHamburgerActive, setIsHamburgerActive] = React.useState(false)
     const { lessonId } = useParams()
     const onClickHamburger = () => {
         setIsHamburgerActive((prev) => !prev)
-        overlayRef.current.classList.toggle('overlayVisible')
+        isOverlayActive ? setIsOverlayActive(false) : setIsOverlayActive(true)
     }
     return (
         <div className={`mainContainer ${styles.container}`} id='app'>

@@ -4,7 +4,7 @@ import styles from './Video.module.scss'
 function VideoYT({ id, imgUrl }) {
     const [isPlayed, setIsPlayed] = React.useState(false)
     const videoId = (id) => {
-        return 'http://www.youtube.com/embed/' + id + '?rel=0&autoplay=1'
+        return 'https://www.youtube.com/embed/' + id + '?rel=0&autoplay=1'
     }
     return isPlayed ? (
         <iframe
@@ -14,7 +14,6 @@ function VideoYT({ id, imgUrl }) {
             
         ></iframe>
     ) : (
-        // <img className={styles.youtube} src='/img/icon.svg' alt='asd' />
         <div className={styles.youtube} style={{backgroundImage: 'url(' + imgUrl + ')'}} onClick={() => setIsPlayed(true)}>
             <div className={styles.play}></div>
         </div>
