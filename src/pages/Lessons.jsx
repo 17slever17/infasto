@@ -2,10 +2,10 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import lessons from '../data/lessons.json'
-console.log(lessons[0].tests)
 import VideoYT from '../components/Video'
 
 import styles from '../scss/Lessons.module.scss'
+import form from '../scss/Form.module.scss'
 
 function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const [activeBtn, setActiveBtn] = React.useState(1)
@@ -21,7 +21,7 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
         isOverlayActive ? setIsOverlayActive(false) : setIsOverlayActive(true)
     }
     return (
-        <div className={`mainContainer ${styles.container}`} id='app'>
+        <div className={`mainContainer ${styles.container}`}>
             <section className={styles.lessons}>
                 <div className={styles.lessonsWrapper}>
                     <p className={`title ${styles.title}`}>Задание №{lessonId}</p>
@@ -58,12 +58,12 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                     }
                                 })}
                             </div>
-                            <form className={styles.form} autoComplete='off'>
-                                <div className={styles.input}>
-                                    <input type='text' className={styles.inputField} required autoComplete='off' />
-                                    <label className={styles.inputLabel}>Введите ответ</label>
+                            <form className={form.form} autoComplete='off'>
+                                <div className={form.input}>
+                                    <input type='text' className={form.inputField} required autoComplete='off' />
+                                    <label className={form.inputLabel}>Введите ответ</label>
                                 </div>
-                                <button className={styles.actionButton}>Отправить</button>
+                                <button className={form.actionButton}>Отправить</button>
                             </form>
                         </div>
                     </div>

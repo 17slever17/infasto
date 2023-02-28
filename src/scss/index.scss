@@ -176,7 +176,7 @@ body {
     .main {
         position: relative;
         border-radius: 0;
-        min-height: calc(100vh - 100px);
+        min-height: calc(100vh - 50px);
     }
     .overlay {
         position: absolute;
@@ -199,6 +199,7 @@ body {
 }
 @media screen and (max-width: 767px) {
     .main {
+		min-height: calc(100vh - 100px);
         .sidebar {
             z-index: 5;
             position: fixed;

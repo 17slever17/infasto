@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import styles from './Variant.module.scss'
 
 function Variant({ id }) {
@@ -9,9 +11,9 @@ function Variant({ id }) {
             </div>
             <div className={styles.start}>
                 <span>◯ Пробник</span>
-                <a className={styles.go} href='#'>
+                <Link to={`./${id}`} className={styles.go}>
                     Начать »
-                </a>
+                </Link>
             </div>
         </div>
     )

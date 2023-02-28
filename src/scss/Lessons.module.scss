@@ -119,38 +119,27 @@
         button {
             width: 100px;
             height: 30px;
+			&:hover {
+				cursor: pointer;
+				background-color: $color-orange;
+				color: white;
+			}
+			&:active {
+				background-color: #ff4800;
+				color: white;
+			}
         }
         .condition {
-            table {
-                width: 80%;
-            }
-            tbody {
-                display: table-row-group;
-                vertical-align: middle;
-                border-color: inherit;
-                th {
-                    background: #ffdf8c;
-                }
-                th,
-                td {
-                    text-align: center;
-                    padding: 5px;
-                    border-collapse: collapse;
-                    border: 1px solid #000;
-                    font-size: 9pt !important;
-                    color: #000;
-                }
-            }
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
             p {
                 font-size: 15px;
                 line-height: 16px;
                 color: #535757;
                 text-shadow: 0.1px 0.1px #bbbbbb;
             }
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            width: 100%;
             a {
                 font-size: 14px;
                 color: #535757;
@@ -168,88 +157,6 @@
         }
     }
 }
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    .input {
-        display: flex;
-        flex-direction: column-reverse;
-        position: relative;
-        margin-bottom: 15px;
-        width: 70%;
-        & + .input {
-            margin-top: 20px;
-        }
-    }
-
-    .inputLabel {
-        color: #5f6363;
-        position: absolute;
-        top: 8px;
-        transition: 0.25s ease;
-    }
-
-    .inputField {
-        border: 0;
-        z-index: 1;
-        background-color: transparent;
-        border-bottom: 2px solid #5f6363;
-        font-size: 16px;
-        padding: 4px 0;
-        color: $color-gray;
-        transition: 0.25s ease;
-        &:focus,
-        &:valid {
-            outline: 0;
-            border-bottom-color: $color-orange;
-            & + .inputLabel {
-                color: $color-orange;
-                transform: translateY(-20px);
-                font-size: 12px;
-            }
-        }
-    }
-
-    .actionButton {
-        font: inherit;
-        font-size: 14px;
-        padding: 8px;
-        width: 100%;
-        font-weight: 500;
-        background-color: #fff9e8;
-        border-radius: 6px;
-        color: #535757;
-        border: 1px solid $color-orange;
-        transition: background-color 0.15s ease-in-out;
-        &:focus {
-            outline: 0;
-        }
-        &:hover {
-            cursor: pointer;
-            background-color: $color-orange;
-            color: white;
-        }
-        &:active {
-            background-color: #ff4800;
-            color: white;
-        }
-    }
-
-    .cardInfo {
-        padding: 10px 10px;
-        text-align: center;
-        font-size: 10px;
-        color: #8597a3;
-        a {
-            display: block;
-            color: $color-orange;
-            text-decoration: none;
-        }
-    }
-}
-
 .pagination {
     display: inline-flex;
     div {

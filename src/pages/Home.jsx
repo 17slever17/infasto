@@ -18,7 +18,7 @@ function Home() {
                     </p>
                 </div>
                 <div className={styles.aboutWrapper}>
-                    <p className='about-title information-title'>Автоматическая проверка заданий</p>
+                    <h3 className='about-title information-title'>Автоматическая проверка заданий</h3>
                     <p className={`${styles.aboutText} information-text`}>
                         Автоматическая проверка дает возможность быстро узнать результат и понять свои недочеты
                     </p>
@@ -27,7 +27,7 @@ function Home() {
                     </p>
                 </div>
                 <div className={styles.aboutWrapper}>
-                    <p className='about-title information-title'>Возможность прорешивать варианты ЕГЭ</p>
+                    <h3 className='about-title information-title'>Возможность прорешивать варианты ЕГЭ</h3>
                     <p className={`${styles.aboutText} information-text`}>
                         Помимо изучения теории, залогом успеха является регулярная практика.
                     </p>

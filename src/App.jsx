@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import Lessons from './pages/Lessons'
 import Materials from './pages/Materials'
 import Variants from './pages/Variants'
+import Task from './components/Variant/Task'
 import Support from './pages/Support'
 import NotFound from './pages/NotFound'
 function App() {
@@ -36,7 +37,7 @@ function App() {
         <div className='container'>
             <nav className='nav'>
                 <img src='../../img/icon.svg' alt='Логотип' className='logo-img' />
-                <p className='nav-title'>ИнфаСто</p>
+                <h1 className='nav-title'>ИнфаСто</h1>
             </nav>
             <main className='main'>
                 <div className={`overlay ${isOverlayActive && 'overlayVisible'}`}></div>
@@ -208,6 +209,7 @@ function App() {
                     ></Route>
                     <Route path='/materials' element={<Materials></Materials>}></Route>
                     <Route path='/variants' element={<Variants></Variants>}></Route>
+					<Route path='/variants/:variantId' element={<Task></Task>}></Route>
                     <Route path='/support' element={<Support></Support>}></Route>
                     <Route path='*' element={<NotFound />} />
                 </Routes>
