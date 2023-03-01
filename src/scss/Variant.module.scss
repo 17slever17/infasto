@@ -20,42 +20,47 @@
             margin-bottom: 0;
         }
         .tasks {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 30px;
-            & > div {
+            form {
                 display: flex;
                 flex-direction: column;
-                gap: 5px;
-                form {
-                    padding-top: 15px;
-                }
-                p {
-                    font-size: 15px;
-                    line-height: 16px;
-                    color: #535757;
-                    text-shadow: 0.1px 0.1px #bbbbbb;
-                }
-                a {
-                    font-size: 14px;
-                    color: #535757;
-                    text-shadow: 0.1px 0.1px #bbbbbb;
-                    text-align: center;
-                }
-                div {
+
+                gap: 15px;
+                & > div {
                     display: flex;
-                    justify-content: center;
-                    img {
-                        max-height: 200px;
-                        max-width: 90%;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 5px;
+
+                    p {
+                        font-size: 15px;
+                        line-height: 16px;
+                        color: #535757;
+                        text-shadow: 0.1px 0.1px #bbbbbb;
+                    }
+                    a {
+                        font-size: 14px;
+                        color: #535757;
+                        text-shadow: 0.1px 0.1px #bbbbbb;
+                        text-align: center;
+                    }
+                    div {
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            max-height: 200px;
+                            max-width: 90%;
+                        }
+                    }
+                    .input {
+                        margin-top: 15px;
                     }
                 }
             }
             button {
                 width: 115px;
                 height: 34px;
-				font-size: 15px;
+                font-size: 15px;
                 background-color: white;
                 &:hover {
                     background-color: $color-orange;
@@ -66,4 +71,23 @@
             }
         }
     }
+}
+.solution {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.answer {
+    width: fit-content;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 3px;
+    margin-block: 2px;
+    border-radius: 2px;
+}
+.details > p {
+    color: #535757;
+}
+.summary {
+    padding-block: 5px;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 
 import lessons from '../data/lessons.json'
+import lessonsAnswer from '../data/lessonsAnswer.json'
 import VideoYT from '../components/Video'
 
 import styles from '../scss/Lessons.module.scss'
@@ -11,7 +12,14 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const [activeBtn, setActiveBtn] = React.useState(1)
     const [isHamburgerActive, setIsHamburgerActive] = React.useState(false)
     const [isPlayed, setIsPlayed] = React.useState(false)
+    const [inputValue, setInputValue] = React.useState('')
+    const [isSolved, setIsSolved] = React.useState(false)
+    const [answerText, setAnswerText] = React.useState('')
     const { lessonId } = useParams()
+    React.useEffect(() => {
+        setInputValue('')
+        setIsSolved(false)
+    }, [activeBtn, lessonId])
     const changeLesson = () => {
         setIsPlayed(false)
         setActiveBtn(1)
@@ -19,6 +27,12 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const onClickHamburger = () => {
         setIsHamburgerActive((prev) => !prev)
         isOverlayActive ? setIsOverlayActive(false) : setIsOverlayActive(true)
+    }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        setIsSolved(true)
+        setAnswerText(event.target[0].value)
+        event.target[0].value = ''
     }
     return (
         <div className={`mainContainer ${styles.container}`}>
@@ -52,19 +66,64 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                     } else if (item.img) {
                                         return (
                                             <div key={index}>
-                                                <img src={`/lessons_files/${item.img}`} />
+                                                <img src={`/lessons_files/${item.img}`} alt='Задание' />
                                             </div>
                                         )
                                     }
                                 })}
                             </div>
-                            <form className={form.form} autoComplete='off'>
+                            <form
+                                className={form.form}
+                                autoComplete='off'
+                                onSubmit={handleSubmit}
+                                style={isSolved ? { display: 'none' } : {}}
+                            >
                                 <div className={form.input}>
-                                    <input type='text' className={form.inputField} required autoComplete='off' />
-                                    <label className={form.inputLabel}>Введите ответ</label>
+                                    <input
+                                        type='text'
+                                        className={form.inputField}
+                                        required
+                                        autoComplete='off'
+                                        maxLength={200}
+                                        id='answer'
+                                        value={inputValue}
+                                        onChange={(ev) => setInputValue(ev.target.value)}
+                                    />
+                                    <label className={form.inputLabel} htmlFor='answer'>
+                                        Введите ответ
+                                    </label>
                                 </div>
                                 <button className={form.actionButton}>Отправить</button>
                             </form>
+                            <div className={styles.solution} style={isSolved ? {} : { display: 'none' }}>
+                                <p
+                                    className={styles.answer}
+                                    style={
+                                        answerText === lessonsAnswer[lessonId - 1][activeBtn - 1].answer
+                                            ? { backgroundColor: '#90ee90' }
+                                            : { backgroundColor: '#ff4c5b' }
+                                    }
+                                >
+                                    Ваш ответ: {answerText}
+                                </p>
+                                <p className={styles.answer}>
+                                    Правильный ответ: {lessonsAnswer[lessonId - 1][activeBtn - 1].answer}
+                                </p>
+                                <details className={styles.details} open={!isSolved}>
+                                    <summary className={styles.summary}>Показать решение</summary>
+                                    {lessonsAnswer[lessonId - 1][activeBtn - 1].solution.map((item, index) => {
+                                        if (item.text) {
+                                            return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
+                                        } else if (item.img) {
+                                            return (
+                                                <div key={index}>
+                                                    <img src={`/lessonsAnswer_files/${item.img}`} alt='Задание' />
+                                                </div>
+                                            )
+                                        }
+                                    })}
+                                </details>
+                            </div>
                         </div>
                     </div>
                     <div className={styles.pagination}>
