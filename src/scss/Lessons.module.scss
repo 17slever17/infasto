@@ -150,10 +150,13 @@
                 display: flex;
                 justify-content: center;
                 img {
-                    max-height: 200px;
+                    max-height: 275px;
                     max-width: 90%;
                 }
             }
+			img {
+				margin-block: 5px;
+			}
         }
     }
 }
@@ -171,7 +174,7 @@
     border-radius: 2px;
 }
 .details > p {
-	color: #535757;
+    color: #535757;
 }
 .summary {
     padding-block: 5px;

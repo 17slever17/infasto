@@ -113,10 +113,14 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                     <summary className={styles.summary}>Показать решение</summary>
                                     {lessonsAnswer[lessonId - 1][activeBtn - 1].solution.map((item, index) => {
                                         if (item.text) {
-                                            return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
+                                            return (
+                                                <p key={index} style={{ color: '#293441', lineHeight: '18px' }}>
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}
+                                                </p>
+                                            )
                                         } else if (item.img) {
                                             return (
-                                                <div key={index}>
+                                                <div key={index} className={styles.condition}>
                                                     <img src={`/lessonsAnswer_files/${item.img}`} alt='Задание' />
                                                 </div>
                                             )

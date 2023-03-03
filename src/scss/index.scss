@@ -181,7 +181,7 @@ body {
     .main {
         position: relative;
         border-radius: 0;
-        min-height: calc(100vh - 50px);
+        min-height: calc(100vh - 48px);
     }
     .overlay {
         position: absolute;
@@ -247,6 +247,6 @@ body {
         }
     }
     .container {
-        margin-bottom: 50px;
+        margin-bottom: 48px;
     }
 }

@@ -85,7 +85,7 @@ function Task() {
                         <summary className={styles.summary}>Показать решение</summary>
                         {variantsAnswer[variantId - 1][index].solution.map((item, index) => {
                             if (item.text) {
-                                return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
+                                return <p key={index} style={{color: '#293441', lineHeight: '18px'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
                             } else if (item.img) {
                                 return (
                                     <div key={index}>
