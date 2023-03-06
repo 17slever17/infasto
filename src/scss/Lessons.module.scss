@@ -219,6 +219,15 @@
         }
     }
 }
+.endPoint {
+	color: $color-light-gray;
+	background-color: $color-dirty-white;
+	&:hover {
+		background-color: $color-dirty-white !important;
+		color: $color-light-gray !important;
+		cursor: default !important;
+	}
+}
 @media screen and (max-width: 1020px) {
     :global(.main) {
         position: relative;

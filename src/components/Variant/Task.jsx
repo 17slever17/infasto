@@ -34,7 +34,7 @@ function Task() {
         event.preventDefault()
         setIsSolved(true)
         let newAnswerText = []
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 27; i++) {
             newAnswerText.push(event.target.elements[i].value)
         }
         setAnswerText(newAnswerText)
@@ -42,23 +42,36 @@ function Task() {
     const answers = variants[variantId - 1].map((items, index) => {
         return (
             <div key={index}>
-                <p className='title' style={{ color: '#293441', fontSize: 18, marginBottom: 15 }}>
+                <p
+                    className='information-title'
+                    style={{ color: '#ff6528', fontSize: 18, marginBottom: 15, textAlign: 'start' }}
+                >
                     Задание №{index + 1}
                 </p>
                 {items.map((item, index) => {
                     if (item.text) {
-                        return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
-                    } else if (item.href) {
                         return (
-                            <a href={`/variants_files/${item.href}`} download key={index}>
-                                Задание №{item.href[0] + item.href[1]}
-                            </a>
+                            <p key={index} style={{ width: '100%' }}>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}
+                            </p>
                         )
                     } else if (item.img) {
                         return (
                             <div key={index}>
                                 <img src={`/variants_files/${variantId}/${item.img}`} alt='Задание' />
                             </div>
+                        )
+                    } else if (item.href) {
+                        return (
+                            <a href={`/variants_files/${variantId}/${item.href}`} download key={index}>
+                                Задание №{item.href[0] + item.href[1]}
+                            </a>
+                        )
+                    } else if (item.href27) {
+						return (
+                            <a href={`/variants_files/${variantId}/${item.href27}`} download key={index}>
+                                Задание №{item.href27[0] + item.href27[1] + item.href27[2]}
+                            </a>
                         )
                     }
                 })}
@@ -85,7 +98,11 @@ function Task() {
                         <summary className={styles.summary}>Показать решение</summary>
                         {variantsAnswer[variantId - 1][index].solution.map((item, index) => {
                             if (item.text) {
-                                return <p key={index} style={{color: '#293441', lineHeight: '18px'}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
+                                return (
+                                    <p key={index} style={{ color: '#293441', lineHeight: '18px' }}>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}
+                                    </p>
+                                )
                             } else if (item.img) {
                                 return (
                                     <div key={index}>

@@ -1,8 +1,12 @@
 [
 	{
-		"id": "FvcHoONPtLg",
 		"lesson_id": "1",
-		"imgUrl": "https://i.ytimg.com/vi/-vVYHcpU950/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE4ofzAP&rs=AOn4CLD8CTvyH7rBR2IZaEdr4Z41Sp2Tfg",
+		"id":[
+			"FvcHoONPtLg"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/-vVYHcpU950/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE4ofzAP&rs=AOn4CLD8CTvyH7rBR2IZaEdr4Z41Sp2Tfg"
+		],
 		"tests": [
 			[
 				{"text": "На рисунке схема дорог изображена в виде графа, в таблице содержатся сведения о длине этих дорог в километрах. Так как таблицу и схему рисовали независимо друг от друга, нумерация населённых пунктов в таблице никак не связана с буквенными обозначениями на графе. Известно, что длина дороги АГ меньше, чем длина дороги ВГ. Определите длину дороги ЕЖ. В ответе запишите целое число  — длину дороги в километрах."},
@@ -23,9 +27,13 @@
 		]
 	},
 	{
-		"id": "VvPKUudi7sY",
 		"lesson_id": "2",
-		"imgUrl": "https://i.ytimg.com/vi/VvPKUudi7sY/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLCCuvKeYRJmeAOItFgm_s_Kw1vGZw",
+		"id": [
+			"VvPKUudi7sY"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/VvPKUudi7sY/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLCCuvKeYRJmeAOItFgm_s_Kw1vGZw"
+		],
 		"tests": [
 			[
 				{"text": "Логическая функция F задаётся выражением (¬x ∧ ¬y) v (y ≡ z) v ¬w. Дан частично заполненный фрагмент, содержащий неповторяющиеся строки таблицы истинности функции F. Определите, какому столбцу таблицы истинности соответствует каждая из переменных x, y, z, w."},
@@ -48,9 +56,13 @@
 		]
 	},
 	{
-		"id": "2rLpGDTQqSU",
 		"lesson_id": "3",
-		"imgUrl": "https://i.ytimg.com/vi/2rLpGDTQqSU/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLDKZFnuo6yIwtmiLM2GbNw_blHkiA",
+		"id": [
+			"2rLpGDTQqSU"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/2rLpGDTQqSU/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLDKZFnuo6yIwtmiLM2GbNw_blHkiA"
+		],
 		"tests": [
 			[	
 				{"text": "В файле приведён фрагмент базы данных «Продукты» о поставках товаров в магазины районов города. База данных состоит из трёх таблиц."},
@@ -76,9 +88,13 @@
 		]
 	},
 	{
-		"id": "SGezFO5ZbKo",
 		"lesson_id": "4",
-		"imgUrl": "https://i.ytimg.com/vi/SGezFO5ZbKo/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFAofzAP&rs=AOn4CLBeMRURXk2sWP-kqRTy0CqtxnMcJQ",
+		"id": [
+			"SGezFO5ZbKo"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/SGezFO5ZbKo/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFAofzAP&rs=AOn4CLBeMRURXk2sWP-kqRTy0CqtxnMcJQ"
+		],
 		"tests": [
 			[
 				{"text": "Для кодирования некоторой последовательности, состоящей из букв А, Б, В и Г, решили использовать неравномерный двоичный код, позволяющий однозначно декодировать двоичную последовательность, появляющуюся на приёмной стороне канала связи. Для букв А, Б, В используются такие кодовые слова: А  — 010, Б  — 1, В  — 011."},
@@ -95,9 +111,13 @@
 		]
 	},
 	{
-		"id": "msq5_VQHOPA",
 		"lesson_id": "5",
-		"imgUrl": "https://i.ytimg.com/vi/msq5_VQHOPA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLDiLisMR-hKtkwp0NOk-LGJVD-ErQ",
+		"id": [
+			"msq5_VQHOPA"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/msq5_VQHOPA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLDiLisMR-hKtkwp0NOk-LGJVD-ErQ"
+		],
 		"tests": [
 			[
 				{"text": "На вход алгоритма подаётся натуральное число N. Алгоритм строит по нему новое число R следующим образом."},
@@ -131,9 +151,13 @@
 		]
 	},
 	{
-		"id": "ve-Arg9qkHE",
 		"lesson_id": "6",
-		"imgUrl": "https://i.ytimg.com/vi/ve-Arg9qkHE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE8ofzAP&rs=AOn4CLBl2LkpMUggCPdG9rdGZi8kYqQOiQ",
+		"id": [
+			"ve-Arg9qkHE"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/ve-Arg9qkHE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE8ofzAP&rs=AOn4CLBl2LkpMUggCPdG9rdGZi8kYqQOiQ"
+		],
 		"tests": [
 			[
 				{"text": "Исполнитель Черепаха действует на плоскости с декартовой системой координат. В начальный момент Черепаха находится в начале координат, её голова направлена вдоль положительного направления оси ординат, хвост опущен. При опущенном хвосте Черепаха оставляет на поле след в виде линии. В каждый конкретный момент известно положение исполнителя и направление его движения. У исполнителя существует две команды: Вперёд n (где n  — целое число), вызывающая передвижение Черепахи на n единиц в том направлении, куда указывает её голова, и Направо m (где m  — целое число), вызывающая изменение направления движения на m градусов по часовой стрелке. Запись"},
@@ -159,9 +183,13 @@
 		]
 	},
 	{
-		"id": "uhwsXCYAnC0",
 		"lesson_id": "7",
-		"imgUrl": "https://i.ytimg.com/vi/uhwsXCYAnC0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE8ofzAP&rs=AOn4CLBkMO-fSmvwC6Zk5cbQu6-iBDmMjg",
+		"id": [
+			"uhwsXCYAnC0"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/uhwsXCYAnC0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIE8ofzAP&rs=AOn4CLBkMO-fSmvwC6Zk5cbQu6-iBDmMjg"
+		],
 		"tests": [
 			[
 				{"text": "Для хранения произвольного растрового изображения размером 1024 × 1024 пикселей отведено 512 Кбайт памяти, при этом для каждого пикселя хранится двоичное число  — код цвета этого пикселя. Для каждого пикселя для хранения кода выделено одинаковое количество бит. Сжатие данных не производится. Какое максимальное количество цветов можно использовать в изображении?"}
@@ -175,9 +203,15 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "8",
-		"imgUrl": "",
+		"id": [
+			"dFY-uay7BWE",
+			"CQwMUiVymCE"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/dFY-uay7BWE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLDv4aPjHm1JjXz2vRr5Q2RGd2JSZA",
+			"https://i.ytimg.com/vi/CQwMUiVymCE/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF4oEzAP&rs=AOn4CLDyqqglIzmvwf2XZ8xyRwXI7kf9YA"
+		],
 		"tests": [
 			[
 
@@ -197,9 +231,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "9",
-		"imgUrl": "",
+		"id": [
+			"UXswtOhNoHc"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/UXswtOhNoHc/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgjICgofzAP&rs=AOn4CLDnHXJXozdOqMryDeNkn9lh5LXcRw"
+		],
 		"tests": [
 			[
 
@@ -219,9 +257,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "10",
-		"imgUrl": "",
+		"id": [
+			"Q7VCB8SDTjM"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/Q7VCB8SDTjM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgTIE8ofzAP&rs=AOn4CLCuMn-iWSS8lcE-wT6G8S2VuNos2w"
+		],
 		"tests": [
 			[
 
@@ -241,9 +283,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "11",
-		"imgUrl": "",
+		"id": [
+			"jyj8oPgnfyk"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/jyj8oPgnfyk/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgWIGUoVzAP&rs=AOn4CLAZR_jB5uTk1UmFUAvPCXySMEjZNw"
+		],
 		"tests": [
 			[
 
@@ -263,9 +309,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "12",
-		"imgUrl": "",
+		"id": [
+			"xn85xnMQAHw"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/xn85xnMQAHw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhWIBMofzAP&rs=AOn4CLDqAxEQP_I8X5GCwDzRiyI6AmBTmg"
+		],
 		"tests": [
 			[
 
@@ -285,9 +335,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "13",
-		"imgUrl": "",
+		"id": [
+			"JZTwn3K0p_0"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/JZTwn3K0p_0/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIGUoWDAP&rs=AOn4CLCOXPKM3wekZaGmQVsD9X3b6agrHA"
+		],
 		"tests": [
 			[
 
@@ -307,9 +361,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "14",
-		"imgUrl": "",
+		"id": [
+			"R8M6AFrLk3w"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/R8M6AFrLk3w/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhWIBMofzAP&rs=AOn4CLDK-VZCoaA2IEYXptfQ2hMSlznZwg"
+		],
 		"tests": [
 			[
 
@@ -329,9 +387,15 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "15",
-		"imgUrl": "",
+		"id": [
+			"MMOcNrthPRA",
+			"6nzCRHFYo0c"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/MMOcNrthPRA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLDNof69diouy34Cp_e2qplnnIuENw",
+			"https://i.ytimg.com/vi/6nzCRHFYo0c/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARgTIFAofzAP&rs=AOn4CLAXIGloi4DyxiqrPM4NVOc8NbzZ-w"
+		],
 		"tests": [
 			[
 
@@ -351,9 +415,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "16",
-		"imgUrl": "",
+		"id": [
+			"SOXD2w8UVeY"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/SOXD2w8UVeY/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLCHeF2Ts_mDw2-bfSPN0pYdP98JpA"
+		],
 		"tests": [
 			[
 
@@ -373,9 +441,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "17",
-		"imgUrl": "",
+		"id": [
+			"M7CihEY7Zkg"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/M7CihEY7Zkg/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLDPShHtDBca8rUAapA9QKlDBA4aDg"
+		],
 		"tests": [
 			[
 
@@ -395,9 +467,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "18",
-		"imgUrl": "",
+		"id": [
+			"YKTrX1AcFnI"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/YKTrX1AcFnI/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLC4QLcl0vqMyb-FdYiG7i22Hq6q2g"
+		],
 		"tests": [
 			[
 
@@ -417,9 +493,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "19",
-		"imgUrl": "",
+		"id": [
+			"rlsaIo0drnQ"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/rlsaIo0drnQ/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLBBTJBw0vOzz52P1s2uIRerxzpV2g"
+		],
 		"tests": [
 			[
 
@@ -439,9 +519,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "20",
-		"imgUrl": "",
+		"id": [
+			"h4ySAgwDjjM"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/h4ySAgwDjjM/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLAlb9jxDtfmMdg24oAtdzPVAArqAw"
+		],
 		"tests": [
 			[
 
@@ -461,9 +545,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "21",
-		"imgUrl": "",
+		"id": [
+			"Dz49CKNifQw"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/Dz49CKNifQw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF8oEzAP&rs=AOn4CLCdBgA7XUWVlvGpdtXP5-lj5OIRHA"
+		],
 		"tests": [
 			[
 
@@ -483,9 +571,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "22",
-		"imgUrl": "",
+		"id": [
+			"P4YBg-hwXPo"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/P4YBg-hwXPo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVbowSyhEKyH5F711MtHa_mRwNhg"
+		],
 		"tests": [
 			[
 
@@ -505,9 +597,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "23",
-		"imgUrl": "",
+		"id": [
+			"j5EX2ZFAmyw"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/j5EX2ZFAmyw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLDnX2-lsGra7V0g3VkBiIMU4hINDA"
+		],
 		"tests": [
 			[
 
@@ -527,9 +623,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "24",
-		"imgUrl": "",
+		"id": [
+			"P98STAgOErw"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/P98STAgOErw/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLBUkE4tKChbDtDE_UyJ5zMFd_gKKw"
+		],
 		"tests": [
 			[
 
@@ -549,9 +649,13 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "25",
-		"imgUrl": "",
+		"id": [
+			"0kjScmAKGZU"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/0kjScmAKGZU/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IF0oEzAP&rs=AOn4CLCJlQKXEi5DNET4Zru7_NbM6vTY7Q"
+		],
 		"tests": [
 			[
 
@@ -571,9 +675,15 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "26",
-		"imgUrl": "",
+		"id": [
+			"HwO5vFA1Ugo",
+			"0Zfi95YfB8A"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/HwO5vFA1Ugo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJ404eOtMSGTd2gyDw0lGyAeGuUg",
+			"https://i.ytimg.com/vi/0Zfi95YfB8A/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgnIBcofzAP&rs=AOn4CLAynnlx_RfJ_hWaFTzDjGof_cGm_A"
+		],
 		"tests": [
 			[
 
@@ -593,9 +703,15 @@
 		]
 	},
 	{
-		"id": "111",
 		"lesson_id": "27",
-		"imgUrl": "",
+		"id": [
+			"uS57H1Qua0s",
+			"Z0SoNqHCnuA"
+		],
+		"imgUrl": [
+			"https://i.ytimg.com/vi/uS57H1Qua0s/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARgmIBYofzAP&rs=AOn4CLBBbAp1YTaCr1pe1R7UmffWAbloPw",
+			"https://i.ytimg.com/vi/Z0SoNqHCnuA/hqdefault.jpg?sqp=-oaymwE2CPYBEIoBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAuADigIMCAAQARhdIFkoZTAP&rs=AOn4CLDrhvB-706IZ41ng03l73sBEsjOfw"
+		],
 		"tests": [
 			[
 

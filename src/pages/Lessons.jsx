@@ -10,6 +10,7 @@ import form from '../scss/Form.module.scss'
 
 function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const [activeBtn, setActiveBtn] = React.useState(1)
+    const [activeVideo, setActiveVideo] = React.useState(0)
     const [isHamburgerActive, setIsHamburgerActive] = React.useState(false)
     const [isPlayed, setIsPlayed] = React.useState(false)
     const [inputValue, setInputValue] = React.useState('')
@@ -23,6 +24,7 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
     const changeLesson = () => {
         setIsPlayed(false)
         setActiveBtn(1)
+        setActiveVideo(0)
     }
     const onClickHamburger = () => {
         setIsHamburgerActive((prev) => !prev)
@@ -39,17 +41,55 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
             <section className={styles.lessons}>
                 <div className={styles.lessonsWrapper}>
                     <p className={`title ${styles.title}`}>Задание №{lessonId}</p>
-                    <div className={styles.card}>
-                        <div className={styles.youtubeWrapper}>
-                            <VideoYT
-                                id={lessons[lessonId - 1].id}
-                                imgUrl={lessons[lessonId - 1].imgUrl}
-                                isPlayed={isPlayed}
-                                setIsPlayed={setIsPlayed}
-                            ></VideoYT>
+
+                    <div style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <div className={styles.card}>
+                            <div className={styles.youtubeWrapper}>
+                                <VideoYT
+                                    id={lessons[lessonId - 1].id[activeVideo]}
+                                    imgUrl={lessons[lessonId - 1].imgUrl[activeVideo]}
+                                    isPlayed={isPlayed}
+                                    setIsPlayed={setIsPlayed}
+                                ></VideoYT>
+                            </div>
+                            <p className={styles.videoTitle}>Задание №{lessonId}</p>
                         </div>
-                        <p className={styles.videoTitle}>Задание №{lessonId}</p>
+                        {lessons[lessonId - 1].id.length - 1 ? (
+                            <div className={styles.pagination} style={{ paddingTop: 10 }}>
+                                <div
+                                    onClick={() => activeVideo !== 0 && setActiveVideo((prev) => prev - 1)}
+                                    className={`${styles.arrow} ${activeVideo === 0 && styles.endPoint}`}
+                                >
+                                    {'<'}
+                                </div>
+                                {lessons[lessonId - 1].id.map((item, index) => {
+                                    return (
+                                        <div
+                                            onClick={() => setActiveVideo(index)}
+                                            className={activeVideo === index ? `${styles.activeBtn}` : undefined}
+											key={index}
+                                        >
+                                            {index + 1}
+                                        </div>
+                                    )
+                                })}
+                                <div
+                                    onClick={() =>
+                                        activeVideo !== lessons[lessonId - 1].id.length &&
+                                        setActiveVideo((prev) => prev + 1)
+                                    }
+                                    className={`${styles.arrow} ${
+                                        activeVideo === lessons[lessonId - 1].id.length - 1 && styles.endPoint
+                                    }`}
+                                >
+                                    {'>'}
+                                </div>
+                            </div>
+                        ) : (
+                            <></>
+                        )}
                     </div>
+
                     <p className='information-title'>Тестовые задания</p>
                     <div className={styles.testWrapper}>
                         <div className={styles.test}>
@@ -130,6 +170,7 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.pagination}>
                         <div
                             onClick={() => activeBtn !== 1 && setActiveBtn((prev) => prev - 1)}
