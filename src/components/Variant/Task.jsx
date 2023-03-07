@@ -12,23 +12,42 @@ function Task() {
     const [isSolved, setIsSolved] = React.useState(false)
     const [answerText, setAnswerText] = React.useState(['', '', '', '', '', '', '', '', '', ''])
     const isRigth = (index) => {
-        if (answerText[index] === variantsAnswer[variantId - 1][index].answer) {
-            result++
-            return true
-        } else {
-            return false
-        }
+        try {
+            if (index > 24) {
+                if (answerText[index] === variantsAnswer[variantId - 1][index].answer) {
+                    result += 2
+                    return 2
+                } else if (
+                    answerText[index].split(' ').includes(variantsAnswer[variantId - 1][index].answer.split(' ')[0]) ||
+                    answerText[index].split(' ').includes(variantsAnswer[variantId - 1][index].answer.split(' ')[1])
+                ) {
+                    result++
+                    return 1
+                } else {
+                    return 0
+                }
+            } else if (answerText[index] === variantsAnswer[variantId - 1][index].answer) {
+                result++
+                return 2
+            } else {
+                return 0
+            }
+        } catch (error) {}
     }
     const scoreWord = (res) => {
-        if ([1, 21].includes(res)) {
+        if ([51].includes(res)) {
             return 'балл'
-        } else if ([2, 3, 4, 22, 23, 24].includes(res)) {
+        } else if ([34, 43, 54, 62, 64, 72, 83, 93].includes(res)) {
             return 'балла'
         } else {
             return 'баллов'
         }
     }
     const { variantId } = useParams()
+    let scores = [
+        7, 14, 20, 27, 34, 40, 43, 46, 48, 51, 54, 56, 59, 62, 64, 67, 70, 72, 75, 78, 80, 83, 85, 88, 90, 93, 95, 98,
+        100
+    ]
     let result = 0
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -38,6 +57,16 @@ function Task() {
             newAnswerText.push(event.target.elements[i].value)
         }
         setAnswerText(newAnswerText)
+    }
+    const colorAnswer = (index) => {
+        switch (isRigth(index)) {
+            case 0:
+                return { backgroundColor: '#ff4c5b', color: '#293441' }
+            case 1:
+                return {backgroundColor: '#ffff66', color: '#293441'}
+            case 2:
+                return { backgroundColor: '#90ee90', color: '#293441' }
+        }
     }
     const answers = variants[variantId - 1].map((items, index) => {
         return (
@@ -68,7 +97,7 @@ function Task() {
                             </a>
                         )
                     } else if (item.href27) {
-						return (
+                        return (
                             <a href={`/variants_files/${variantId}/${item.href27}`} download key={index}>
                                 Задание №{item.href27[0] + item.href27[1] + item.href27[2]}
                             </a>
@@ -81,14 +110,7 @@ function Task() {
                     <label className={form.inputLabel}>Введите ответ</label>
                 </div>
                 <div className={styles.solution} style={isSolved ? {} : { display: 'none' }}>
-                    <p
-                        className={styles.answer}
-                        style={
-                            isRigth(index)
-                                ? { backgroundColor: '#90ee90', color: '#293441' }
-                                : { backgroundColor: '#ff4c5b', color: '#293441' }
-                        }
-                    >
+                    <p className={styles.answer} style={colorAnswer(index)}>
                         Ваш ответ: {answerText[index]}
                     </p>
                     <p className={styles.answer} style={{ color: '#293441' }}>
@@ -131,7 +153,7 @@ function Task() {
                                 className='title'
                                 style={isSolved ? { fontSize: 24, marginBlock: 15 } : { display: 'none' }}
                             >
-                                Результат: {result} {scoreWord(result)}
+                                Результат: {scores[result - 1]} {scoreWord(scores[result - 1])}
                             </p>
                         </form>
                     </div>
