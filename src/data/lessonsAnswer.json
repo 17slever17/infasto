@@ -412,321 +412,834 @@
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "152",
 			"solution": [
-
+				{"text": "s = '1' + '0' * 75"},
+				{"text": "while ('10' in s) or ('1' in s):"},
+				{"text": "    if '10' in s:"},
+				{"text": "        s = s.replace('10', '001', 1)"},
+				{"text": "    else:"},
+				{"text": "        s = s.replace('1', '00', 1)"},
+				{"text": "print(s.count('0'))"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "12",
 			"solution": [
-
+				{"text": "s = '1' * 45 + '2' * 45 "},
+				{"text": "while '111' in s:"},
+				{"text": "    s = s.replace('111', '2', 1)"},
+				{"text": "    s = s.replace('222', '1', 1)"},
+				{"text": "print(s)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "221",
 			"solution": [
-				
+				{"text": "s = '1' * 85"},
+				{"text": "while '11111' in s:"},
+				{"text": "    s = s.replace('111', '2', 1)"},
+				{"text": "    s = s.replace('222', '1', 1)"},
+				{"text": "print(s)"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "23",
 			"solution": [
-
+				{"text": "Начнем считать количество путей с конца маршрута – с города К. NX  — количество различных путей из города А в город X, N  — общее число путей."},
+				{"text": "В 'К' можно приехать из И, Ж, Е, или З, поэтому N = NК = NИ + NЖ + N Е + NЗ (1)"},
+				{"text": "Аналогично:"},
+				{"text": "NИ = NД;"},
+				{"text": "NЖ = NД + NВ + NЕ;"},
+				{"text": "NЕ = NВ + NГ;"},
+				{"text": "NЗ = NЕ."},
+				{"text": "Добавим еще вершины:"},
+				{"text": "NД = NБ + NВ;"},
+				{"text": "NВ = NА + NБ + NГ = 1 + 1 + 1 = 3;"},
+				{"text": "NГ = NА = 1;"},
+				{"text": "NБ = NА = 1."},
+				{"text": "Преобразуем первые вершины с учетом значений вторых:"},
+				{"text": "NИ = NД = NБ + NВ = 1 + 3 = 4;"},
+				{"text": "NЖ = NД + NВ + NЕ = 4 + 3 + 4 = 11;"},
+				{"text": "NЕ = NВ + NГ = 3 + 1 = 4;"},
+				{"text": "NЗ = NЕ = 4."},
+				{"text": "Подставим в формулу (1):"},
+				{"text": "N = NК = 4 + 11 + 4 + 4 = 23"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "64",
 			"solution": [
-
+				{"text": "Количество путей до города Т равно сумме путей в каждый из тех городов, из которых есть дорога в T. С помощью этого наблюдения посчитаем последовательно количество путей до каждого из городов, кроме тех, которые не проходят через город Л:"},
+				{"text": "А = 1"},
+				{"text": "Б = А = 1"},
+				{"text": "Д = А = 1"},
+				{"text": "Г = А + Б = 1 + 1 = 2"},
+				{"text": "В = А + Г = 1 + 2 = 3"},
+				{"text": "Е = Г + Д = 2 + 1 = 3"},
+				{"text": "Ж = В + Г + Е = 3 + 2 + 3 = 8"},
+				{"text": "K = Ж = 8"},
+				{"text": "Н = Ж = 8"},
+				{"text": "М = Ж + Н = 16"},
+				{"text": "Л = К + Ж + М = 8 + 8 + 16 = 32"},
+				{"text": "П = Л = 32 (так как ищем пути проходящие через город Л)"},
+				{"text": "Р = П = 32"},
+				{"text": "С = П = 32"},
+				{"text": "Т = 32 + 32 = 64"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "18",
 			"solution": [
-				
+				{"text": "Количество путей из города А в город М, проходящих через город Ж и не проходящих через город К, равно произведению количества путей из города А в город Ж и количества путей из города Ж в город М, причем пути из города Ж в город М не должны проходить через город К."},
+				{"text": "Найдем количество путей из города А в город Ж:"},
+				{"text": "А = 1"},
+				{"text": "Б = А = 1"},
+				{"text": "Д = А = 1"},
+				{"text": "Г = А + Д = 2"},
+				{"text": "В = А + Б + Г = 4"},
+				{"text": "Е = Б = 1"},
+				{"text": "З = Д = 1"},
+				{"text": "Ж = В + Г + Д + Е + З = 9."},
+				{"text": "Из города Ж в город М есть только два пути, не проходящие через город К: Ж—И—М и Ж—И—Л—М."},
+				{"text": "Следовательно, количество путей из города А в город М, проходящих через город Ж и не проходящих через город К, равно 9 · 2  =  =18."}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "5",
 			"solution": [
-
+				{"text": "x = 8**2020 + 4**2017 + 26 - 1"},
+				{"text": "s = ''"},
+				{"text": "while x != 0: "},
+				{"text": "    s += str(x % 2)"},
+				{"text": "    x //= 2"},
+				{"text": "s = s[::-1]"},
+				{"text": "print(s.count('1'))"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "6141",
 			"solution": [
-
+				{"text": "for x in '0123456789ABC':"},
+				{"text": "    t = int('26' + x + '98', 13) + int('4' + x + '296', 13)"},
+				{"text": "    if t % 34 == 0:"},
+				{"text": "        print(t // 34)"},
+				{"text": "        exit(0)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "18754",
 			"solution": [
-				
+				{"text": "result_search = []"},
+				{"text": "for x in '0123456789ABCDE':"},
+				{"text": "    for y in '0123456789ABCDE':"},
+				{"text": "        t = int('90' + x + '4' + y, 15) + int('91' + x + y + '2', 16)"},
+				{"text": "        if t % 56 == 0:"},
+				{"text": "            result_search.append(t)"},
+				{"text": "if result_search:"},
+				{"text": "    print(min(result_search) // 56)"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "12",
 			"solution": [
-
+				{"text": "for a in range(0, 1000): "},
+				{"text": "k = 0"},
+				{"text": "for x in range(0, 1000):"},
+				{"text": "    if (x & 29 != 0) <= ((x & 17 == 0) <= (x & a != 0)):"},
+				{"text": "        k += 1"},
+				{"text": "if k == 1000:"},
+				{"text": "    print(a)"},
+				{"text": "    break"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "19",
 			"solution": [
-
+				{"text": "Введем обозначения:"},
+				{"text": "(x ∈А) ≡ A; (x ∈ P) ≡ P; (x ∈ Q) ≡ Q."},
+				{"text": "Применив преобразование импликации, получаем:"},
+				{"text": "¬A ∨ P ∨ Q"},
+				{"text": "Логическое ИЛИ истинно, если истинно хотя бы одно утверждение. Выражение P ∨ Q истинно на отрезке [10, 29]. Значит, ¬A должно быть истинно вне этого отрезка, следовательно, A должно быть истинно на отрезке [10, 29]. Его длина 19."}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "0",
 			"solution": [
-				
+				{"text": "for A in range(64):"},
+				{"text": "B = True"},
+				{"text": "for x in range(64):"},
+				{"text": "    if ((x&51==0) or (x&41!=0) or (x&A==0))==0:"},
+				{"text": "        B=False"},
+				{"text": "if B:"},
+				{"text": "    print(A)"},
+				{"text": "    break"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "44",
 			"solution": [
-
+				{"text": "def F(n):"},
+				{"text": "    if n == 1:"},
+				{"text": "        return 1"},
+				{"text": "    if n == 2:"},
+				{"text": "        return 1"},
+				{"text": "    if n > 2:"},
+				{"text": "        return  F(n-1) * n - 2 * F(n-2)"},
+				{"text": "print(F(6))"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "48",
 			"solution": [
-
+				{"text": "def F(n):"},
+				{"text": "    if n == 1:"},
+				{"text": "        return 1"},
+				{"text": "    if n == 2:"},
+				{"text": "        return 1"},
+				{"text": "    if n > 2:"},
+				{"text": "        return F(n - 2) * (n - 1)"},
+				{"text": "print(F(7))"}
+			
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "4122",
 			"solution": [
-				
+				{"text": "def F(n):"},
+				{"text": "    if n == 1:"},
+				{"text": "        return 1"},
+				{"text": "    if n % 2 == 0:"},
+				{"text": "        return n + F(n-1)"},
+				{"text": "    if n>1 and n % 2 != 0:"},
+				{"text": "        return 2 * F(n-2)"},
+				{"text": "print(F(26))"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "2802 1990",
 			"solution": [
-
+				{"text": "count = 0"},
+				{"text": "m = -20001"},
+				{"text": "f = open('17_1.txt')"},
+				{"text": "l = [int(i) for i in f]"},
+				{"text": "for i in range(len(l) - 1):"},
+				{"text": "    if (l[i] % 3 == 0) or (l[i + 1] % 3 == 0):"},
+				{"text": "        count += 1"},
+				{"text": "        m = max(m, l[i]+ l[i + 1])"},
+				{"text": "print(count, m)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "40436496 19999",
 			"solution": [
-
+				{"text": "count = m = 0"},
+				{"text": "f = open('17_2.txt')"},
+				{"text": "l = [int(i) for i in f]"},
+				{"text": "for i in range(len(l) - 1):"},
+				{"text": "    for j in range(i + 1, len(l)):"},
+				{"text": "        if l[i] * l[j] % 14 != 0:"},
+				{"text": "            count += 1"},
+				{"text": "            m = max(m, l[i] + l[j])"},
+				{"text": "print(count, m)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "29278 19860",
 			"solution": [
-				
+				{"text": "count = m = 0"},
+				{"text": "f = open('17_3.txt')"},
+				{"text": "l = [int(i) for i in f]"},
+				{"text": "for i in range(len(l) - 1):"},
+				{"text": "    for j in range(i + 1, len(l)):"},
+				{"text": "        if (l[i] + l[j]) % 60 == 0 and (l[i] % 40 == 0 or l[j] % 40 == 0):"},
+				{"text": "            count += 1"},
+				{"text": "            m = max(m, l[i] + l[j])"},
+				{"text": "print(count, m)"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "1204502",
 			"solution": [
-
+				{"text": "Сначала найдём максимальную денежную сумму. Для этого найдём максимальную денежную сумму для каждой ячейки таблицы. Для каждой ячейки верхней строки это будет сумма всех ячеек слева от текущей. Для каждой ячейки левого столбца это будет сумма всех ячеек сверху от текущей. В ячейку L1 запишем формулу =СУММ($A$1:A1). Скопируем эту формулу во все ячейки в диапазоне M1:U1 и в диапазоне L2:L10. Для остальных ячеек будем сравнивать значение ячейки слева и значение ячейки сверху и присваивать текущей ячейке значение суммы той ячейки, в которой значение больше, и текущей ячейки. В M2 запишем формулу =ЕСЛИ(L2>M1;L2+B2;M1+B2) и скопируем эту формулу во все ячейки диапазона M2:U10. Таким образом, в ячейке U10 получим значение максимальной денежной суммы  — 1204."},
+				{"text": "Аналогичным образом найдём значение минимальной денежной суммы. Ячейки диапазонов L1:L10 и M1:U1 заполняются также, как при поиске максимальной денежной суммы. В M2 запишем формулу =ЕСЛИ(L2 < M1;L2+B2;M1+B2) и скопируем эту формулу во все ячейки диапазона M2:U10. Таким образом, в ячейке U10 получим значение минимальной денежной суммы  — 502."}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "1133522",
 			"solution": [
-
+				{"text": "Для поиска максимального значения будем работать с областью А13:J22, так как при расчетах будем использовать исходные значения монет в каждой клетке. В ячейку А22 напишем значение =A10. Для каждой ячейки левого столбца это будет сумма всех ячеек ниже от текущей. Внесем в ячейку А21 формулу =A9+A22 и скопируем за маркер вверх до ячейки A13. Далее в ячейку B22 вставим формулу =B10+МАКС(A22;B23) и скопируем за маркер в ячейки B13:J22. Значение в ячейке J13 будет максимальной денежной суммой, которую сможет собрать Робот  — 1133."},
+				{"text": "Аналогичным образом найдём значение минимальной денежной суммы. Вместо функции МАКС в диапазоне ячеек B13:J22 напишем функцию МИН. В таком случае значение в ячейке J13 будет минимальной денежной суммой, которую сможет собрать Робот  — 522."}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "1044448",
 			"solution": [
-				
+				{"text": "Для поиска максимального значения будем работать с областью А13:J22, так как при расчетах будем использовать исходные значения монет в каждой клетке. В ячейку А13 напишем значение =A1. Для каждой ячейки левого столбца это будет сумма всех ячеек выше от текущей. Внесем в ячейку А14 формулу =A2+A13 и скопируем за маркер вниз до ячейки A22. Далее в ячейку B13 вставим формулу =B1+МАКС(A13;B12) и скопируем за маркер в ячейки B13:J22. Значение в ячейке J22 будет максимальной денежной суммой, которую сможет собрать Робот  — 1044."},
+				{"text": "Аналогичным образом найдём значение минимальной денежной суммы. Вместо функции МАКС в диапазоне ячеек B13:J22 напишем функцию МИН. В таком случае значение в ячейке J22 будет минимальной денежной суммой, которую сможет собрать Робот  — 448."}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "11",
 			"solution": [
-
+				{"text": "def f(s, n, m):"},
+				{"text": "    if s >= 42: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, n + 1, m), f(s + 3, n + 1, m), f(s * 2, n + 1, m)]"},
+				{"text": "    return any(h)"},
+				{"text": "for s in range(1, 42):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 2 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "9",
 			"solution": [
-
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 41: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a + 2, n + 1, m), f(s + 2, a + 1, n + 1, m), f(s * 2, a, n + 1, m), f(s, a * 2, n + 1, m)]"},
+				{"text": "    return any(h)"},
+				{"text": "for s in range(1, 33):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 8, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 2 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "21",
 			"solution": [
-				
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 75: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a, n + 1, m), f(s, a + 1, n + 1, m), f(s + a, a, n + 1, m), f(s, a + s, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 68):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 7, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 2 хода"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "101719",
 			"solution": [
-
+				{"text": "def f(s, n, m):"},
+				{"text": "    if s >= 42: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, n + 1, m), f(s + 3, n + 1, m), f(s * 2, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 42):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем 3 числа, у которых 3 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "14",
 			"solution": [
-
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 41: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a + 2, n + 1, m), f(s + 2, a + 1, n + 1, m), f(s * 2, a, n + 1, m), f(s, a * 2, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 33):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 8, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем максимальное число, у которого 3 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "2033",
 			"solution": [
-				
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 75: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a, n + 1, m), f(s, a + 1, n + 1, m), f(s + a, a, n + 1, m), f(s, a + s, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 68):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 7, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем 2 числа, у которых 3 хода"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "16",
 			"solution": [
-
+				{"text": "def f(s, n, m):"},
+				{"text": "    if s >= 42: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, n + 1, m), f(s + 3, n + 1, m), f(s * 2, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 42):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 4 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "10",
 			"solution": [
-
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 41: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a + 2, n + 1, m), f(s + 2, a + 1, n + 1, m), f(s * 2, a, n + 1, m), f(s, a * 2, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 33):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 8, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 4 хода"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "32",
 			"solution": [
-				
+				{"text": "def f(s, a, n, m):"},
+				{"text": "    if s + a >= 75: return n % 2 == m % 2"},
+				{"text": "    if n == m: return 0"},
+				{"text": "    h = [f(s + 1, a, n + 1, m), f(s, a + 1, n + 1, m), f(s + a, a, n + 1, m), f(s, a + s, n + 1, m)]"},
+				{"text": "    return any(h) if (n + 1) % 2 == m % 2 else all(h)"},
+				{"text": "for s in range(1, 68):"},
+				{"text": "    for m in range(1, 5):"},
+				{"text": "        if f(s, 7, 0, m) == True:"},
+				{"text": "            print(s, m)"},
+				{"text": "            break"},
+				{"text": "Берем минимальное число, у которого 4 хода"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "25",
 			"solution": [
-
+				{"text": "Отсортируем данные в таблице так, чтобы все независимые процессы оказались в начале таблицы и любой процесс был расположен после всех процессов, от которых он зависит. Также в таблицу добавим столбец «Время окончания процесса» и запишем туда длительности независимых процессов."},
+				{"img": "22_1_1.png"},
+				{"text": "Далее рассчитаем время выполнения оставшихся процессов:"},
+				{"text": "f(4) = 3 + max(f(2), f(3)) = 3 + 7 = 10;"},
+				{"text": "f(5) = 6 + max(f(1), f(4)) = 6 + 10 = 16;"},
+				{"text": "f(7) = 2 + max(f(2), f(4)) = 2 + 10 = 12;"},
+				{"text": "f(8) = 4 + f(5) = 4 + 16 = 20;"},
+				{"text": "f(10) = 2 + max(f(4), f(7)) = 2 + 12 = 14;"},
+				{"text": "f(11) = 5 + max(f(3), f(8)) = 5 + 20 = 25;"},
+				{"text": "f(12) = 1 + max(f(2), f(9)) = 1 + 9 = 10;"},
+				{"text": "f(13) = 6 + max(f(4), f(6)) = 6 + 10 = 16;"},
+				{"text": "f(14) = 8 + max(f(3), f(9)) = 8 + 9 = 17;"},
+				{"text": "f(15) = 4 + max(f(1), f(7)) = 4 + 12 = 16."},
+				{"img": "22_1_2.png"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "33",
 			"solution": [
-
+				{"text": "Отсортируем данные в таблице так, чтобы все независимые процессы оказались в начале таблицы и любой процесс был расположен после всех процессов, от которых он зависит. Также в таблицу добавим столбец «Время окончания процесса» и запишем туда длительности независимых процессов."},
+				{"img": "22_2_1.png"},
+				{"text": "Далее рассчитаем время выполнения оставшихся процессов:"},
+				{"text": "f(3) = 3 + f(2) = 3 + 9 = 12;"},
+				{"text": "f(5) = 4 + f(3) = 4 + 12 = 16;"},
+				{"text": "f(6) = 7 + f(4) = 7 + 4 = 11;"},
+				{"text": "f(8) = 9 + max(f(5), f(6)) = 9 + 16 = 25;"},
+				{"text": "f(9) = 2 + max(f(6), f(7)) = 2 + 11 = 13;"},
+				{"text": "f(10) = 6 + max(f(3), f(5)) = 6 + 16 = 22;"},
+				{"text": "f(11) = 2 + max(f(5), f(10)) = 2 + 22 = 24;"},
+				{"text": "f(13) = 8 + max(f(4), f(5)) = 8 + 16 = 24;"},
+				{"text": "f(14) = 3 + f(7) = 3 + 3 = 6;"},
+				{"text": "f(15) = 8 + max(f(2), f(8)) = 8 + 25 = 33."},
+				{"img": "22_2_2.png"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "36",
 			"solution": [
-				
+				{"text": "Отсортируем данные в таблице так, чтобы все независимые процессы оказались в начале таблицы и любой процесс был расположен после всех процессов, от которых он зависит. Также в таблицу добавим столбец «Время окончания процесса» и запишем туда длительности независимых процессов."},
+				{"img": "22_3_1.png"},
+				{"text": "Далее рассчитаем время выполнения оставшихся процессов:"},
+				{"text": "f(2) = 6 + f(1) = 6 + 9 = 15;"},
+				{"text": "f(3) = 6 + f(2) = 6 + 15 = 21;"},
+				{"text": "f(6) = 7 + max(f(1), f(2)) = 7 + 15 = 22;"},
+				{"text": "f(7) = 9 + f(6) = 9 + 22 = 31;"},
+				{"text": "f(9) = 5 + f(5) = 5 + 9 = 14;"},
+				{"text": "f(10) = 3 + max(f(1), f(9)) = 3 + 14 = 17;"},
+				{"text": "f(11) = 9 + f(6) = 9 + 22 = 31;"},
+				{"text": "f(12) = 5 + max(f(7), f(8)) = 5 + 31 = 36;"},
+				{"text": "f(13) = 3 + f(5) = 3 + 9 = 12;"},
+				{"text": "f(14) = 8 + max(f(5), f(9)) = 8 + 14 = 22."},
+				{"img": "22_3_2.png"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "12",
 			"solution": [
-
+				{"text": "def f(x, y):"},
+				{"text": "    if x == y:"},
+				{"text": "        return 1"},
+				{"text": "    if x > y:"},
+				{"text": "        return 0"},
+				{"text": "    return f(x + 2, y) + f(x * 3, y)"},
+				{"text": "print(f(1, 31))"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "81",
 			"solution": [
-
+				{"text": "def f(x, y):"},
+				{"text": "    if x > y:"},
+				{"text": "        return 0"},
+				{"text": "    if x == y:"},
+				{"text": "        return 1"},
+				{"text": "    else:"},
+				{"text": "        return f(x + 1, y) + f(x + 3, y)"},
+				{"text": "print(f(1, 8) * f(8, 15))"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "14",
 			"solution": [
-				
+				{"text": "def f(x, y):"},
+				{"text": "    if x > y or x == 16:"},
+				{"text": "        return 0"},
+				{"text": "    if x == y:"},
+				{"text": "        return 1"},
+				{"text": "    else:"},
+				{"text": "        return f(x + 1, y) + f(x * 2, y)"},
+				{"text": "print(f(1, 10) * f(10, 21))"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "7",
 			"solution": [
-
+				{"text": "f = open('24_1.txt').readline()"},
+				{"text": "k = 1"},
+				{"text": "m = 0"},
+				{"text": "for i in range(len(f) - 1):"},
+				{"text": "    if f[i] == 'Z' and f[i + 1] == 'Z':"},
+				{"text": "        k += 1"},
+				{"text": "        m = max(m, k)"},
+				{"text": "    else: "},
+				{"text": "        k = 1"},
+				{"text": "print(m)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "1",
 			"solution": [
-
+				{"text": "f = open('24_2.txt').readline()"},
+				{"text": "k = 1"},
+				{"text": "m = 1"},
+				{"text": "for i in range(len(f)-1):"},
+				{"text": "    if f[i] == 'C' and f[i+1] == 'C':"},
+				{"text": "        k += 1"},
+				{"text": "        m = max(m, k)"},
+				{"text": "    else: k = 1"},
+				{"text": "print(m)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "7",
 			"solution": [
-				
+				{"text": "f = open('24_3.txt').readline()"},
+				{"text": "k = 1"},
+				{"text": "m = 1"},
+				{"text": "for i in range(len(f)-1):"},
+				{"text": "    if f[i] == 'L' and f[i+1] == 'L':"},
+				{"text": "        k += 1"},
+				{"text": "        m = max(m, k)"},
+				{"text": "    else: k = 1"},
+				{"text": "print(m)"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "6876 6374 6924 8024 8358",
 			"solution": [
-
+				{"text": "count = 0"},
+				{"text": "i = 10000001"},
+				{"text": "while count < 5:"},
+				{"text": "    halfI = i // 2"},
+				{"text": "    dell = 0"},
+				{"text": "    countDel = 0"},
+				{"text": "    for j in range(halfI, 1, -1):"},
+				{"text": "        if i % j == 0:"},
+				{"text": "            countDel += 1"},
+				{"text": "            dell += j"},
+				{"text": "            if dell > 10000:"},
+				{"text": "                break"},
+				{"text": "            elif countDel == 2:"},
+				{"text": "                print(dell)"},
+				{"text": "                count += 1"},
+				{"text": "                break"},
+				{"text": "    i += 1"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "294499921 2248091 352275361 2571353 373301041 2685619",
 			"solution": [
-
+				{"text": "maxi = 0"},
+				{"text": "for i in range(289123456, 389123457):"},
+				{"text": "    sqrti = i**0.5"},
+				{"text": "    numdel = 0"},
+				{"text": "    if round(sqrti) == sqrti:"},
+				{"text": "        maxdel = 1"},
+				{"text": "        for j in range(2, round(sqrti) - 1):"},
+				{"text": "            if i % j == 0:"},
+				{"text": "                if maxdel == 1: maxdel = i // j"},
+				{"text": "                numdel += 2"},
+				{"text": "        if numdel == 2: print(i, maxdel)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "1 2422027 2 2422033 3 2422037 4 2422073",
 			"solution": [
-				
+				{"text": "a = 2422000"},
+				{"text": "b = 2422080"},
+				{"text": "m = 0"},
+				{"text": "for i in range(a, b + 1):"},
+				{"text": "    k = 0"},
+				{"text": "    for j in range(2, i // 2 + 1):"},
+				{"text": "        if i % j==0:"},
+				{"text": "            k += 1"},
+				{"text": "            break"},
+				{"text": "    if k == 0:"},
+				{"text": "        m += 1"},
+				{"text": "        print(m, i)"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "1612 90",
 			"solution": [
-
+				{"text": "f = open('26_1.txt')"},
+				{"text": "data = f.readlines()"},
+				{"text": "s = data[0].split()"},
+				{"text": "s = int(s[0])"},
+				{"text": "del (data[0])  # первая строка больше не нужна, удаляем ее"},
+				{"text": "for i in range(0, len(data)):"},
+				{"text": "    data[i] = int(data[i])"},
+				{"text": "data = sorted(data)"},
+				{"text": "summa = 0"},
+				{"text": "for count in range(0, len(data)):"},
+				{"text": "    if summa + data[count] > s: break"},
+				{"text": "    summa += data[count]"},
+				{"text": "print(count)"},
+				{"text": "zapas = s - summa"},
+				{"text": "for i in range(0, len(data)):"},
+				{"text": "    if data[i] - data[count - 1] <= zapas:"},
+				{"text": "        itog = data[i]"},
+				{"text": "print(itog)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "5895 227",
 			"solution": [
-
+				{"text": "f = open('26_2.txt')"},
+				{"text": "x, y = f.readline().split()"},
+				{"text": "y = int(y)"},
+				{"text": "for_B_price = []"},
+				{"text": "for_B_kol = []"},
+				{"text": "for i in f:"},
+				{"text": "    if 'A' in i:"},
+				{"text": "        a, b, c = i.split()"},
+				{"text": "        y -= int(a) * int(b)"},
+				{"text": "    else:"},
+				{"text": "        a2, b2, c2 = i.split()"},
+				{"text": "        for_B_price.append(int(a2))"},
+				{"text": "        for_B_kol.append(int(b2))"},
+				{"text": "mini = min(for_B_price)"},
+				{"text": "index_mini = 0"},
+				{"text": "for i in range(len(for_B_price)):"},
+				{"text": "    if mini == for_B_price[i]:"},
+				{"text": "        index_mini = i"},
+				{"text": "kol_B = 0"},
+				{"text": "while y > for_B_price[index_mini]:"},
+				{"text": "    y -= for_B_price[index_mini]"},
+				{"text": "    for_B_kol[index_mini] -= 1"},
+				{"text": "    kol_B += 1"},
+				{"text": "    if for_B_kol[index_mini] == 0:"},
+				{"text": "        for_B_price[index_mini] = 1000000000"},
+				{"text": "        mini = min(for_B_price)"},
+				{"text": "        for i in range(len(for_B_price)):"},
+				{"text": "            if mini == for_B_price[i]:"},
+				{"text": "                index_mini = i"},
+				{"text": "print(kol_B, y)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "157 267",
 			"solution": [
-				
+				{"text": "f = open('26.txt')"},
+				{"text": "maxsum = int(f.readline().replace('\n','').split(' ')[1])"},
+				{"text": "l = f.readlines()"},
+				{"text": "f.close()"},
+				{"text": "ll = []"},
+				{"text": "for i in l:"},
+				{"text": "    ii = i.replace('\n','').split(' ')"},
+				{"text": "    ii[0] = int(ii[0])"},
+				{"text": "    ll.append(ii)"},
+				{"text": "alist = [k[0] for k in ll if k[1] == 'A']"},
+				{"text": "blist = [k[0] for k in ll if k[1] == 'B']"},
+				{"text": "alist.sort()"},
+				{"text": "blist.sort()"},
+				{"text": "ll.sort(key=lambda k: k[0])"},
+				{"text": "msum = 0"},
+				{"text": "maxc = 0"},
+				{"text": "for i in ll:"},
+				{"text": "    if msum + i[0] <= maxsum:"},
+				{"text": "        msum += i[0]"},
+				{"text": "        maxc += 1"},
+				{"text": "    else: break"},
+				{"text": "ba = []"},
+				{"text": "for i in alist:"},
+				{"text": "    if len(ba) >= maxc: break"},
+				{"text": "    if sum(ba) + i <= maxsum:"},
+				{"text": "        ba.append(i)"},
+				{"text": "    else: break"},
+				{"text": "bb = []"},
+				{"text": "for i in blist:"},
+				{"text": "    if len(ba) + len(bb) >= maxc: break"},
+				{"text": "    if sum(ba) + sum(bb) + i <= maxsum:"},
+				{"text": "        bb.append(i)"},
+				{"text": "    else:"},
+				{"text": "        while sum(ba) + sum(bb) + i > maxsum: del ba[-1]"},
+				{"text": "        bb.append(i)"},
+				{"text": "print(len(ba))"},
+				{"text": "print(maxsum - (sum(ba) + sum(bb)))"}
 			]
 		}
 	],
 	[
 		{
-			"answer": "123",
+			"answer": "86097 25057",
 			"solution": [
-
+				{"text": "f = open('27B_1.txt')"},
+				{"text": "n = int(f.readline())"},
+				{"text": "lefts = [0 for i in range(30)]"},
+				{"text": "maxsum = 0"},
+				{"text": "for i in range(30):"},
+				{"text": "    lefts[i] = 2 * 1000000000"},
+				{"text": "    count = 0"},
+				{"text": "    sum = 0"},
+				{"text": "for i in range(1, n + 1):"},
+				{"text": "    num = int(f.readline())"},
+				{"text": "    sum = sum + num"},
+				{"text": "    if (num % 2 == 1) and (num > 0):"},
+				{"text": "        count = count + 1"},
+				{"text": "    d = count % 30"},
+				{"text": "    if sum < lefts[d]:"},
+				{"text": "        lefts[d] = sum"},
+				{"text": "    maxsum = max(maxsum, sum - lefts[d])"},
+				{"text": "print(maxsum)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "447552 994000",
 			"solution": [
-
+				{"text": "f = open('27B_2.txt')"},
+				{"text": "s = f.readlines() "},
+				{"text": "n = int(s[0])"},
+				{"text": "maxi = 0"},
+				{"text": "max_0 = 0"},
+				{"text": "max_2 = 0"},
+				{"text": "max_7 = 0"},
+				{"text": "max_14 = 0"},
+				{"text": "for i in range(1, n + 1):"},
+				{"text": "    s[i] = int(s[i])"},
+				{"text": "    if s[i] % 14 == 0:"},
+				{"text": "        max_14 = max(max_14, s[i])"},
+				{"text": "    elif s[i] % 7 == 0:"},
+				{"text": "        max_7 = max(max_7, s[i])"},
+				{"text": "    elif max_2 % 2 == 0:"},
+				{"text": "        max_2 = max(max_2, s[i])"},
+				{"text": "    else:"},
+				{"text": "        max_0 = max(max_0, s[i])"},
+				{"text": "maxi = max(max_14 * max(max_7, max_0, max_2), max_7 * max_2)"},
+				{"text": "print(maxi)"}
 			]
 		},
 		{
-			"answer": "123",
+			"answer": "185 100918194",
 			"solution": [
-				
+				{"text": "f = open('27B_3.txt')"},
+				{"text": "s = f.readlines()"},
+				{"text": "n = int(s[0])"},
+				{"text": "sumAns = 0"},
+				{"text": "sum2 = 0"},
+				{"text": "sum3 = 0"},
+				{"text": "minDif = 20001"},
+				{"text": "for i in range(1, n + 1):"},
+				{"text": "    x, y, z = map(int, s[i].split())"},
+				{"text": "    if (x <= y) and (x <= z):"},
+				{"text": "        sumAns = sumAns + x"},
+				{"text": "        if y <= z:"},
+				{"text": "            sum2 = sum2 + y"},
+				{"text": "            sum3 = sum3 + z"},
+				{"text": "        else:"},
+				{"text": "            sum3 = sum3 + y"},
+				{"text": "            sum2 = sum2 + z"},
+				{"text": "        if ((abs(x - y)) % 2 != 0) and (abs(x - y) < minDif): minDif = abs(x - y)"},
+				{"text": "        elif ((abs(x - z)) % 2 != 0) and (abs(x - z) < minDif): minDif = abs(x - z)"},
+				{"text": "    elif (y <= z) and (y <= x):"},
+				{"text": "        sumAns = sumAns + y"},
+				{"text": "        if x <= z:"},
+				{"text": "            sum2 = sum2 + x"},
+				{"text": "            sum3 = sum3 + z"},
+				{"text": "        else:"},
+				{"text": "            sum3 = sum3 + x"},
+				{"text": "            sum2 = sum2 + z"},
+				{"text": "        if ((abs(y - x)) % 2 != 0) and (abs(y - x) < minDif): minDif = abs(y - x)"},
+				{"text": "        elif ((abs(y - z)) % 2 != 0) and (abs(y - z) < minDif):  minDif = abs(y - z)"},
+				{"text": "    elif (z <= x) and (z <= y):"},
+				{"text": "        sumAns = sumAns + z"},
+				{"text": "        if x <= y:"},
+				{"text": "            sum2 = sum2 + x"},
+				{"text": "            sum3 = sum3 + y"},
+				{"text": "        else:"},
+				{"text": "            sum3 = sum3 + x"},
+				{"text": "            sum2 = sum2 + y"},
+				{"text": "        if ((abs(z - x)) % 2 != 0) and (abs(z - y) < minDif):"},
+				{"text": "            minDif = abs(z - x)"},
+				{"text": "        elif ((abs(z - y)) % 2 != 0) and (abs(z - x) < minDif):"},
+				{"text": "            minDif = abs(z - y)"},
+				{"text": "if (sum2 + sum3) % 2 != 0: print(sumAns)"},
+				{"text": "else: print(sumAns + minDif)"}
 			]
 		}
 	]

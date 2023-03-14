@@ -45,7 +45,7 @@ function Task() {
     }
     const { variantId } = useParams()
     let scores = [
-        7, 14, 20, 27, 34, 40, 43, 46, 48, 51, 54, 56, 59, 62, 64, 67, 70, 72, 75, 78, 80, 83, 85, 88, 90, 93, 95, 98,
+        0, 7, 14, 20, 27, 34, 40, 43, 46, 48, 51, 54, 56, 59, 62, 64, 67, 70, 72, 75, 78, 80, 83, 85, 88, 90, 93, 95, 98,
         100
     ]
     let result = 0
@@ -153,7 +153,7 @@ function Task() {
                                 className='title'
                                 style={isSolved ? { fontSize: 24, marginBlock: 15 } : { display: 'none' }}
                             >
-                                Результат: {scores[result - 1]} {scoreWord(scores[result - 1])}
+                                Результат: {scores[result]} {scoreWord(scores[result])}
                             </p>
                         </form>
                     </div>

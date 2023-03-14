@@ -16,6 +16,9 @@ label {
 summary {
     user-select: none;
     -webkit-user-select: none;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 html {

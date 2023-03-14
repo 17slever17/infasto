@@ -67,7 +67,7 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                         <div
                                             onClick={() => setActiveVideo(index)}
                                             className={activeVideo === index ? `${styles.activeBtn}` : undefined}
-											key={index}
+                                            key={index}
                                         >
                                             {index + 1}
                                         </div>
@@ -97,19 +97,25 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                 {lessons[lessonId - 1].tests[Number(activeBtn) - 1].map((item, index) => {
                                     if (item.text) {
                                         return <p key={index}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{item.text}</p>
-                                    } else if (item.href) {
-                                        return (
-                                            <a href={`/lessons_files/${item.href}`} download key={index}>
-                                                Задание №{lessonId}
-                                            </a>
-                                        )
                                     } else if (item.img) {
                                         return (
                                             <div key={index}>
                                                 <img src={`/lessons_files/${item.img}`} alt='Задание' />
                                             </div>
                                         )
-                                    }
+                                    } else if (item.href) {
+                                        return (
+                                            <a href={`/lessons_files/${item.href}`} download key={index}>
+                                                Задание №{lessonId}
+                                            </a>
+                                        )
+                                    } else if (item.href27) {
+										return (
+											<a href={`/lessons_files/${item.href}`} download key={index}>
+												Задание №{item.href27[0] + item.href27[1] + item.href27[2]}
+											</a>
+										)
+									}
                                 })}
                             </div>
                             <form
@@ -161,7 +167,11 @@ function Lessons({ isOverlayActive, setIsOverlayActive }) {
                                         } else if (item.img) {
                                             return (
                                                 <div key={index} className={styles.condition}>
-                                                    <img src={`/lessonsAnswer_files/${item.img}`} alt='Задание' />
+                                                    <img
+                                                        src={`/lessonsAnswer_files/${item.img}`}
+                                                        alt='Решение'
+                                                        style={{ maxHeight: 400 }}
+                                                    />
                                                 </div>
                                             )
                                         }
