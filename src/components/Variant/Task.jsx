@@ -128,7 +128,7 @@ function Task() {
                             } else if (item.img) {
                                 return (
                                     <div key={index}>
-                                        <img src={`/variantsAnswer_files/${item.img}`} alt='Задание' />
+                                        <img src={`/variantsAnswer_files/${variantId}/${item.img}`} alt='Задание' />
                                     </div>
                                 )
                             }
